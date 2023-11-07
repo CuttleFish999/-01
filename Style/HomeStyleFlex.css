@@ -8,9 +8,9 @@
     /* font-size: 0; */
 }
 
-/* nav{
+nav{
     display: flex;
-} */
+}
 
 /* 會員 */
 
@@ -31,7 +31,7 @@
 #mumberLogin~a.added-element {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     opacity: 0;
     transition: opacity 1s;
     width: 6em;

@@ -11,10 +11,22 @@ const mumberLoginArr = [
     "討論區",
 ];
 
+const mumberLoginLinksArr = [
+    "registration.html",
+    "login.html",
+    "forgot_password.html",
+    "profile.html",
+    "favorites.html",
+    "browse_history.html",
+    "contract.html",
+    "verification.html",
+    "forum.html",
+];
+
 const mumberLoginLink = document.getElementById('mumberLogin');
 
 mumberLoginLink.addEventListener('click', function () {
-    addElementEvent(mumberLoginArr, mumberLoginLink);
+    addElementEvent(mumberLoginArr, mumberLoginLink,mumberLoginLinksArr);
 });
 //成為房東
 const BecomeALandlordArr = [
@@ -45,9 +57,9 @@ const rentalServices = document.getElementById('rentalServices');
 rentalServices.addEventListener('click', function () {
     addElementEvent(rentalServicesArr, rentalServices);
 });
-
+// 新增元素<a>事件
 let elementsAdded = false;
-function addElementEvent(arr, SuperFa) {
+function addElementEvent(arr, SuperFa, linksArr) {
     const existingElements = document.querySelectorAll('.added-element');
 
     if (elementsAdded) {
@@ -62,6 +74,7 @@ function addElementEvent(arr, SuperFa) {
             const newElement = document.createElement('a');
             newElement.textContent = arr[i];
             newElement.classList.add('added-element');
+            newElement.href = `./link/${linksArr[i]}`;
             SuperFa.insertAdjacentElement('afterend', newElement);
             setTimeout(() => {
                 newElement.style.opacity = 1;
