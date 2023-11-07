@@ -132,7 +132,7 @@ function addElementEvent(arr, SuperFa, linksArr) {
             const newElement = document.createElement('a');
             newElement.textContent = arr[i];
             newElement.classList.add('added-element');
-            newElement.href = `/link/${linksArr[i]}`;
+            newElement.href = `/link/${SuperFa.innerText}/${linksArr[i]}`;
             SuperFa.insertAdjacentElement('afterend', newElement);
             setTimeout(() => {
                 newElement.style.opacity = 1;
