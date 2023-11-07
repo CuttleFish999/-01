@@ -1,56 +1,86 @@
 *{
     padding: 0;
     margin: 0;
-    list-style: none;
+    /* font-size: 0; */
+}
+
+/* 會員 */
+
+#mumberLogin {
+    /* font-size: 1em; */
     text-align: center;
+    display: block;
+    width: 6em;
+    background: rgb(33, 33, 216);
+    color: white;
+    font-size: 1.01em;
 }
 
-body,html{
-    width: 100%;
-    height: 100%;
+#mumberLogin:hover {
+    color: yellow;
 }
 
-/* 導航列 */
-
-#nav-ul{
-    height: 150px;
-    /* text-align: center; */
-    background:linear-gradient(rgb(214, 73, 73),rgb(164, 227, 164)) ;
-}
-
-#nav-ul img{
-    width: 20px;
-
-}
-
-#nav-ul{
+#mumberLogin~a.added-element {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    
+    opacity: 0;
+    transition: opacity 1s;
+    width: 6em;
+
 }
 
-#nav-ul li img {
-    margin-right: -1.8em;
-    transform: scale(0);
-}
-
-#nav-ul li {
-    padding: 0 100px;
-    font-size: 1em;
-    color: #fff;
-}
-
-#nav-ul li:hover {
-    /* padding-right: 0; */
-    font-size: 1em;
+#mumberLogin~a.added-element:hover {
     color: yellow;
-    transform: scale(1.5);
-    transition: .3s;
 }
 
 
-#nav-ul li:hover img {
-    margin-right: 0em;
-    transform: scale(1);
+#mumberLogin~a.added-element:nth-child(even) {
+    background: rgb(250, 124, 124);
+
 }
 
+
+#mumberLogin~a.added-element:nth-child(odd) {
+    background: rgb(111, 111, 248);
+}
+/* 成為房東 */
+
+#BecomeALandlord {
+    /* font-size: 1em; */
+    text-align: center;
+    display: block;
+    width: 6em;
+    background: rgb(186, 23, 23);
+    color: white;
+    font-size: 1.01em;
+}
+
+#BecomeALandlord:hover {
+    color: yellow;
+}
+
+#BecomeALandlord~a.added-element {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s;
+    width: 6em;
+
+}
+
+#BecomeALandlord~a.added-element:hover {
+    color: yellow;
+}
+
+
+#BecomeALandlord~a.added-element:nth-child(even) {
+    background: rgb(250, 124, 124);
+
+}
+
+
+#mumberLogin~a.added-element:nth-child(odd) {
+    background: rgb(111, 111, 248);
+}
