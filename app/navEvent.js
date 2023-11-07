@@ -37,6 +37,10 @@ const BecomeALandlordArr = [
     "預約管理",
 ];
 
+const BecomeALandlordLinksArr = [
+   
+];
+
 const BecomeALandlord = document.getElementById('BecomeALandlord');
 
 BecomeALandlord.addEventListener('click', function () {
@@ -50,6 +54,10 @@ const rentalServicesArr = [
     "我的收藏",
     "連絡房東",
     "合約查詢",
+];
+
+const rentalServicesLinksArr = [
+   
 ];
 
 const rentalServices = document.getElementById('rentalServices');
@@ -74,7 +82,7 @@ function addElementEvent(arr, SuperFa, linksArr) {
             const newElement = document.createElement('a');
             newElement.textContent = arr[i];
             newElement.classList.add('added-element');
-            newElement.href = `./link/${linksArr[i]}`;
+            newElement.href = `/link/${linksArr[i]}`;
             SuperFa.insertAdjacentElement('afterend', newElement);
             setTimeout(() => {
                 newElement.style.opacity = 1;

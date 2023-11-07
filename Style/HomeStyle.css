@@ -6,11 +6,26 @@
     padding: 0;
     margin: 0;
     /* font-size: 0; */
+    text-decoration: none;
 }
 
-/* nav{
-    display: flex;
-} */
+li{
+    text-align: center;
+    width: 6.05em;
+    background: rgb(174, 203, 105);
+    color: brown;
+    font-size: 1em;
+}
+li:hover a{
+    color: yellow;
+    
+}
+li:hover{
+    /* color: yellow; */
+    background: rgb(1, 1, 1);
+}
+
+
 
 /* 會員 */
 
@@ -18,7 +33,7 @@
     /* font-size: 1em; */
     text-align: center;
     display: inline-block;
-    width: 6em;
+    width: 6em; width: 6em;
     background: rgb(33, 33, 216);
     color: white;
     font-size: 1.01em;
@@ -89,7 +104,7 @@
 }
 
 
-#mumberLogin~a.added-element:nth-child(odd) {
+#BecomeALandlord~a.added-element:nth-child(odd) {
     background: rgb(111, 111, 248);
 }
 
@@ -130,6 +145,6 @@
 }
 
 
-#mumberLogin~a.added-element:nth-child(odd) {
+#rentalServices~a.added-element:nth-child(odd) {
     background: rgb(111, 111, 248);
 }
