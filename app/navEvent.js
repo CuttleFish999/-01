@@ -1,5 +1,5 @@
- // 會員
- const mumberLoginArr = [
+// 會員
+const mumberLoginArr = [
     "註冊",
     "登入",
     "忘記密碼",
@@ -10,11 +10,11 @@
     "會員認證",
     "討論區",
 ];
+
 const mumberLoginLink = document.getElementById('mumberLogin');
 
-
 mumberLoginLink.addEventListener('click', function () {
-    addElementEvent(mumberLoginArr,mumberLoginLink);
+    addElementEvent(mumberLoginArr, mumberLoginLink);
 });
 //成為房東
 const BecomeALandlordArr = [
@@ -24,15 +24,30 @@ const BecomeALandlordArr = [
     "租賃單",
     "預約管理",
 ];
+
 const BecomeALandlord = document.getElementById('BecomeALandlord');
-// let elementsAdded = false;
 
 BecomeALandlord.addEventListener('click', function () {
-    addElementEvent(BecomeALandlordArr,BecomeALandlord);
+    addElementEvent(BecomeALandlordArr, BecomeALandlord);
+});
+
+//租賃服務
+const rentalServicesArr = [
+    "預約看房",
+    "瀏覽房屋",
+    "我的收藏",
+    "連絡房東",
+    "合約查詢",
+];
+
+const rentalServices = document.getElementById('rentalServices');
+
+rentalServices.addEventListener('click', function () {
+    addElementEvent(rentalServicesArr, rentalServices);
 });
 
 let elementsAdded = false;
-function addElementEvent(arr,SuperFa) {
+function addElementEvent(arr, SuperFa) {
     const existingElements = document.querySelectorAll('.added-element');
 
     if (elementsAdded) {
