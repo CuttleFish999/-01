@@ -26,7 +26,7 @@ const mumberLoginLinksArr = [
 const mumberLoginLink = document.getElementById('mumberLogin');
 
 mumberLoginLink.addEventListener('click', function () {
-    addElementEvent(mumberLoginArr, mumberLoginLink,mumberLoginLinksArr);
+    addElementEvent(mumberLoginArr, mumberLoginLink, mumberLoginLinksArr);
 });
 //成為房東
 const BecomeALandlordArr = [
@@ -38,7 +38,7 @@ const BecomeALandlordArr = [
 ];
 
 const BecomeALandlordLinksArr = [
-   
+
 ];
 
 const BecomeALandlord = document.getElementById('BecomeALandlord');
@@ -57,7 +57,7 @@ const rentalServicesArr = [
 ];
 
 const rentalServicesLinksArr = [
-   
+
 ];
 
 const rentalServices = document.getElementById('rentalServices');
@@ -65,6 +65,56 @@ const rentalServices = document.getElementById('rentalServices');
 rentalServices.addEventListener('click', function () {
     addElementEvent(rentalServicesArr, rentalServices);
 });
+
+// 商城
+const shopArr = [
+    "家具商城",
+    "車位出租",
+    "我的收藏",
+    "訂單查詢",
+];
+
+const shopLinksArr = [
+
+];
+
+const shop = document.getElementById('rentalServices');
+
+rentalServices.addEventListener('click', function () {
+    addElementEvent(shop, rentalServices);
+});
+// 關於我們
+const aboutUsArr = [
+    "最新消息",
+    "品牌故事",
+];
+
+const aboutUsLinksArr = [
+
+];
+
+const aboutUs = document.getElementById('rentalServices');
+
+rentalServices.addEventListener('click', function () {
+    addElementEvent(shop, rentalServices);
+});
+
+// 聯絡我們
+const callUsArr = [
+    "維修申報",
+    "檢舉投訴",
+];
+
+const callUsLinksArr = [
+
+];
+
+const callUs = document.getElementById('rentalServices');
+
+rentalServices.addEventListener('click', function () {
+    addElementEvent(shop, rentalServices);
+});
+
 // 新增元素<a>事件
 let elementsAdded = false;
 function addElementEvent(arr, SuperFa, linksArr) {

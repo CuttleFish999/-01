@@ -148,3 +148,126 @@ li:hover{
 #rentalServices~a.added-element:nth-child(odd) {
     background: rgb(111, 111, 248);
 }
+
+/* 商城 */
+
+#shop {
+    /* font-size: 1em; */
+    text-align: center;
+    display: block;
+    width: 6em;
+    background: rgb(186, 23, 23);
+    color: white;
+    font-size: 1.01em;
+}
+
+#shop:hover {
+    color: yellow;
+}
+
+#shop~a.added-element {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s;
+    width: 6em;
+
+}
+
+#shop~a.added-element:hover {
+    color: yellow;
+}
+
+
+#shop~a.added-element:nth-child(even) {
+    background: rgb(250, 124, 124);
+
+}
+
+
+#shop~a.added-element:nth-child(odd) {
+    background: rgb(111, 111, 248);
+}
+
+/* 關於我們 */
+
+#aboutUs{
+    /* font-size: 1em; */
+    text-align: center;
+    display: block;
+    width: 6em;
+    background: rgb(33, 33, 216);
+    color: white;
+    font-size: 1.01em;
+}
+
+#aboutUs:hover {
+    color: yellow;
+}
+
+#aboutUs~a.added-element {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s;
+    width: 6em;
+
+}
+
+#aboutUs~a.added-element:hover {
+    color: yellow;
+}
+
+
+#aboutUs~a.added-element:nth-child(even) {
+    background: rgb(250, 124, 124);
+
+}
+
+
+#aboutUs~a.added-element:nth-child(odd) {
+    background: rgb(111, 111, 248);
+}
+
+/* 聯絡我們 */
+
+#callUs{
+    /* font-size: 1em; */
+    text-align: center;
+    display: block;
+    width: 6em;
+    background: rgb(186, 23, 23);
+    color: white;
+    font-size: 1.01em;
+}
+
+#callUs:hover {
+    color: yellow;
+}
+
+#callUs~a.added-element {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s;
+    width: 6em;
+
+}
+
+#callUs~a.added-element:hover {
+    color: yellow;
+}
+
+
+#callUs~a.added-element:nth-child(even) {
+    background: rgb(250, 124, 124);
+
+}
+
+
+#callUs~a.added-element:nth-child(odd) {
+    background: rgb(111, 111, 248);
+}
