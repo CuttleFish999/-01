@@ -1,25 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>首頁</title>
     <style>
-        #clickMe~a.added-element {
+        #mumberLogin {
+            text-align: center;
+            display: inline-block;
+            width: 6em;
+            background: rgb(111, 111, 248);
+        }
+
+        #mumberLogin:hover {
+            color: yellow;
+        }
+
+        #mumberLogin~a.added-element {
+            text-align: center;
             display: flex;
             flex-direction: column;
             opacity: 0;
             transition: opacity 1s;
+            width: 6em;
+
+        }
+
+        #mumberLogin~a.added-element:hover {
+            color: yellow;
+        }
+
+
+        #mumberLogin~a.added-element:nth-child(even) {
+            background: rgb(250, 124, 124);
+
+        }
+
+
+        #mumberLogin~a.added-element:nth-child(odd) {
+            background: rgb(111, 111, 248);
         }
     </style>
 </head>
-<body>
-    <a id="clickMe">會員系統</a>
 
+<body>
+    <nav>
+        <a id="mumberLogin">會員系統</a>
+        <a id="BecomeALandlord">成為房東</a>
+    </nav>
     <script>
-        const mumberLoginArr = ['註冊', '登入', '忘記密碼', '資料修改', '加入收藏'];
-        const clickMeLink = document.getElementById('clickMe');
+        // 會員
+        const mumberLoginArr = [
+            "註冊",
+            "登入",
+            "忘記密碼",
+            "資料修改",
+            "加入收藏",
+            "瀏覽過的物件",
+            "合約查詢",
+            "會員認證",
+            "討論區",
+        ];
+        const mumberLoginLink = document.getElementById('mumberLogin');
         let elementsAdded = false;
 
-        clickMeLink.addEventListener('click', function () {
+        mumberLoginLink.addEventListener('click', function () {
+            addElementEvent();
+        });
+        //成為房東
+        const BecomeALandlord = [
+            "流程解說",
+            "房源提供",
+            "房源管理",
+            "租賃單",
+            "預約管理",
+        ];
+
+
+        function addElementEvent() {
             const existingElements = document.querySelectorAll('.added-element');
 
             if (elementsAdded) {
@@ -30,11 +87,11 @@
                     });
                 });
             } else {
-                for (let i = mumberLoginArr.length; i >= 0 ; i--) {
+                for (let i = mumberLoginArr.length; i >= 0; i--) {
                     const newElement = document.createElement('a');
                     newElement.textContent = mumberLoginArr[i];
                     newElement.classList.add('added-element');
-                    clickMeLink.insertAdjacentElement('afterend', newElement);
+                    mumberLoginLink.insertAdjacentElement('afterend', newElement);
                     setTimeout(() => {
                         newElement.style.opacity = 1;
                     }, 10 * i);
@@ -42,7 +99,8 @@
             }
 
             elementsAdded = !elementsAdded;
-        });
+        }
     </script>
 </body>
+
 </html>
