@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好租網</title>
-    <link rel="stylesheet" href="./Style/HomeStyle.css">
+    <title>好諸網</title>
+    <!-- <link rel="stylesheet" href="./Style/HomeStyle.css"> -->
+    <style>
+        #mumberLogin-A:hover ~ a.added-element {
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
 </head>
 <body>
     <h1>首頁</h1>
     <nav>
         <ul id="nav-ul">
-            <li><img src="./Icon/user-regular.svg" alt="">會員登入<a id="mumberLogin-A" href="#"></a></li>
+            <li id="mumberLogin-li"><img src="./Icon/user-regular.svg" alt="">會員登入<a id="mumberLogin-A" href="#"></a></li>
             <li><img src="./Icon/person-shelter-solid.svg" alt="">成為房東<a href="#"></a></li>
             <li><img src="./Icon/person-praying-solid.svg" alt="">租賃服務<a href="#"></a></li>
             <li><img src="./Icon/store-solid.svg" alt=""> 商城<a href="#"></a></li>

@@ -1,19 +1,43 @@
-// navEvent.js
+const mumberLoginArr = ['註冊', '登入', '忘記密碼', '資料修改', '加入收藏'];
+// const clickMeLink = document.getElementById('mumberLogin-A');
+const clickMeLink = document.getElementById('mumberLogin-li');
+let elementsAdded = false;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const mumberLoginArr = ['註冊','登入','忘記密碼','資料修改','加入收長'];
-    const navLinks = document.querySelectorAll('#nav-ul a'); // 選取所有的<a>元素
+clickMeLink.addEventListener('mouseenter', function () {
+    const existingElements = document.querySelectorAll('.added-element');
 
-    navLinks.forEach((link, index) => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // 防止默認的鏈接跳轉行為
+    if (elementsAdded) {
+        existingElements.forEach((element, index) => {
+            element.style.opacity = 0;
+            element.addEventListener('transitionend', () => {
+                element.remove();
+            });
+        });
+    } else {
+        for (let i = mumberLoginArr.length; i >= 0; i--) {
+            const newElement = document.createElement('a');
+            newElement.textContent = mumberLoginArr[i];
+            newElement.classList.add('added-element');
+            clickMeLink.insertAdjacentElement('afterend', newElement);
+            setTimeout(() => {
+                newElement.style.opacity = 1;
+            }, 10 * i);
+        }
+    }
 
-            // 創建新的<p>元素，設定其內容為陣列元素
-            const newElement = document.createElement('p');
-            newElement.textContent = mumberLoginArr[index];
+    elementsAdded = !elementsAdded;
+});
 
-            // 插入新元素到<a>元素之後
-            link.insertAdjacentElement('afterend', newElement);
+// 添加mouseleave事件以在鼠标离开时触发收回元素
+clickMeLink.addEventListener('mouseleave', function () {
+    const existingElements = document.querySelectorAll('.added-element');
+
+    existingElements.forEach((element, index) => {
+        element.style.opacity = 0;
+        element.addEventListener('transitionend', () => {
+            element.remove();
         });
     });
+
+    elementsAdded = false;
 });
