@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首頁</title>
+    <style>
+        #clickMe~a.added-element {
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+<body>
+    <a id="clickMe">會員系統</a>
+
+    <script>
+        const mumberLoginArr = ['註冊', '登入', '忘記密碼', '資料修改', '加入收藏'];
+        const clickMeLink = document.getElementById('clickMe');
+        let elementsAdded = false;
+
+        clickMeLink.addEventListener('click', function () {
+            const existingElements = document.querySelectorAll('.added-element');
+
+            if (elementsAdded) {
+                existingElements.forEach((element, index) => {
+                    element.style.opacity = 0;
+                    element.addEventListener('transitionend', () => {
+                        element.remove();
+                    });
+                });
+            } else {
+                for (let i = mumberLoginArr.length; i >= 0 ; i--) {
+                    const newElement = document.createElement('a');
+                    newElement.textContent = mumberLoginArr[i];
+                    newElement.classList.add('added-element');
+                    clickMeLink.insertAdjacentElement('afterend', newElement);
+                    setTimeout(() => {
+                        newElement.style.opacity = 1;
+                    }, 10 * i);
+                }
+            }
+
+            elementsAdded = !elementsAdded;
+        });
+    </script>
+</body>
+</html>

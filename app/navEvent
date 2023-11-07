@@ -1,0 +1,19 @@
+// navEvent.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mumberLoginArr = ['註冊','登入','忘記密碼','資料修改','加入收長'];
+    const navLinks = document.querySelectorAll('#nav-ul a'); // 選取所有的<a>元素
+
+    navLinks.forEach((link, index) => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // 防止默認的鏈接跳轉行為
+
+            // 創建新的<p>元素，設定其內容為陣列元素
+            const newElement = document.createElement('p');
+            newElement.textContent = mumberLoginArr[index];
+
+            // 插入新元素到<a>元素之後
+            link.insertAdjacentElement('afterend', newElement);
+        });
+    });
+});
